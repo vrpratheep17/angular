@@ -1,0 +1,49 @@
+/* Full-screen layout with a Jarvis-style gradient */
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: #0f172a;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Top bar */
+.header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 18px;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  user-select: none;
+}
+
+/* Where the graph lives */
+.graph-wrapper {
+  position: relative;
+  height: calc(100vh - 56px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.graph-svg {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.graph-svg:active {
+  cursor: grabbing;
+}
+
+/* background rect should sit under everything */
+.bg-rect {
+  pointer-events: none;
+}

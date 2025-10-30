@@ -1,0 +1,38 @@
+<div class="page">
+  <div class="header">Jarvis Graph Demo (D3 canvas test)</div>
+
+  <div class="graph-wrapper">
+    <svg #svgEl class="graph-svg">
+      <!-- This <g> is what we'll pan/zoom -->
+      <g class="viewport">
+        <!-- We will inject shapes/nodes here in TS -->
+      </g>
+
+      <!-- Optional: background grid pattern for style/debug -->
+      <defs>
+        <pattern
+          id="bg-grid"
+          width="24"
+          height="24"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M 24 0 L 0 0 0 24"
+            fill="none"
+            stroke="rgba(255,255,255,0.2)"
+            stroke-width="1"
+          />
+        </pattern>
+      </defs>
+
+      <rect
+        class="bg-rect"
+        x="-5000"
+        y="-5000"
+        width="10000"
+        height="10000"
+        fill="url(#bg-grid)"
+      />
+    </svg>
+  </div>
+</div>
